@@ -25,7 +25,7 @@ This experience is *not in any way* about becoming an expert JavaScript programm
 
 ### Specifically
 
-Below are a bunch of questions and indications of things to do. For each indication of something to do with code, there is also an accompanying question to answer or brief explanation to give. 
+Below are a bunch of questions and indications of things to do. For each indication of something to do with code, there is also an accompanying question to answer or brief explanation to give.
 
 **To complete and submit this assignment, you should:**
 
@@ -46,7 +46,7 @@ Below are a bunch of questions and indications of things to do. For each indicat
 
 * In answering questions, assume all of the questions include a *explain briefly* note -- you do NOT have to, and should not, write extended paragraphs. Be as concise as you can and explain in your own words. Don't worry about "whether it's enough" -- just worry about conveying your understanding so you can read it later, or even give it to someone else, and the answers will help/make sense.
 
-* It is not acceptable to copy and paste answers from the internet and submit them as your own. If you cite things, make sure you provide a citation, including to links. If you get information from a resource and rephrase it so you're basically explaining an idea, that's just fine for an explanatory purpose in this assignment, but you *must* cite any quotes or examples that aren't yours. 
+* It is not acceptable to copy and paste answers from the internet and submit them as your own. If you cite things, make sure you provide a citation, including to links. If you get information from a resource and rephrase it so you're basically explaining an idea, that's just fine for an explanatory purpose in this assignment, but you *must* cite any quotes or examples that aren't yours.
 
 * **For grading:** we are grading on...
 	* Following the instructions
@@ -57,13 +57,9 @@ Below are a bunch of questions and indications of things to do. For each indicat
 
 ### Names of people you have worked with on this assignment
 * List everyone's names and uniqnames who have worked on this assignment with you, **including your own name, but make sure YOUR name is first and bold**
-* Like this: 
-* **Jackie Cohen (jczetta)**
-* Yea-Ree Chang (cyearee)
-* Ruchi Ookalkar (ruchido)
-* Innocent Obi (innoobi)
-* Zhen Wang (alejwang)
-* etc.
+* Like this:
+* **Chenyang Lyu(lvchen)**
+
 
 ## Questions & code instructions
 
@@ -78,26 +74,36 @@ Some JavaScript code
 ```
 
 * **What does a code comment look like in JavaScript? What character/s do you have to put before a comment?**
-
+//
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
-
+in the html file, the js codes need to be included in the <script> tag
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
+The first is alert(), the second is console.log(). if I want to reminder users something, I would use alert(),because it is a pop-up window, if I want to see something in the console, I would use console.log()
 
 * **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
+I need to comment out the "alert("hello");" to get rid of the pop-up box
+And I can use alert(Date()) to have a text box that shows the current date and time.
 
 * **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
+I should change the value in line 16 to my name in order to put my name at the top
 
 * **What does the word `document` represent in this code? Explain briefly.**
+document means the content that shown on the screen, so it refers to the properties of the document content
 
-* **What is happening in line 12 ( 
+* **What is happening in line 12 (
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
 )? Explain, briefly (<= 2 sentences).**
+it gets the number of how many li tags in the code by using the length attributes and popluates the value of the number to the tag whose id is "item"
 
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
+white
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
+Because the background color and boder color of tag <p> is set as "background-color: #b3b3b3;" and " border: 3px solid #FFFFFF;", which are gery color and white color
+
 
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
+I've noticed that there is function does the samiliar thing in the code, which is the "copyFunction()" function. This function will be executed when the "University of Michigan" list item get copied because of the "oncopy" attribute. And what the "copyFunction" function does is populate the value to the tag whose id is "cheer". So I copied the codes and manipulate it a little bit.
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
 
@@ -111,7 +117,7 @@ function handleClick(){
 ```js
 <button onclick=handleClick() id="wow-button">Wow</button>
 ```
-
+When you click on the button wow, it will execute the funtion handleClick() because the the button tag has the attribute "onclick". And the handleClick funtion will run the code within it which is the alter()function. So it will display the text box.
 
 
 * **Knowing what you learned from the previous question, add code/markup to the `jsPracticeLab.html` file *so that* there is a button with the text `Spring Equinox 2019` on it somewhere on the page, and when that button is clicked, a text box containing the text `March 20, 2019` appears. (There's no function -- that I am aware of -- to automatically get this info, you've got to type it yourself.)**
@@ -123,14 +129,21 @@ function handleClick(){
 * **Check out the file `jquerylib_submit_example.html`. This is an example of code that uses a package called `jQuery` (and this will need you to have an internet connection to run it properly, although the other file does not). Check out resources above for more on jQuery!**
 
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
+because in the style tag, the class error and class good values are the red and blue
 
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
+I searched for this expression with keyword "/^[a-zA-Z]+$/ js", and google told me this is the regular expression, which helps test whether a string is only consis of letters. the site I checked: https://stackoverflow.com/questions/19657750/what-is-the-differnce-between-a-za-z-and-a-za-z. In this code, this varibale helps test whether the text input by users is a word or not.
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
+In JS, the condition is placed within the "()", and the main content is placed within the curly brackets. And each line ends with a ";". And in JS, we use "else if" if the first conditoin is wrong
+In Python, the condition doesn't have to be in the brackets and there is a ":" after the conditions. And the main content are not enclosed in the curly brackets and there is no ";" at the end of each line. In python, we use "elif" if the first conditon is wrong
 
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
+it meas 10000ms for the text ot fade out
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
+For this question, I googled it and found some insights from this site:https://www.tutorialspoint.com/What-is-document-ready-method-in-jQuery.
+the ready() function helps ensure the codes inside it run after the DOM gets ready. The second line ensures the codes inside in it run only the form is submitted.
 
 ```js
 $(document).ready(function(){
